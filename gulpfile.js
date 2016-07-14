@@ -2,11 +2,23 @@ const gulp = require('gulp');
 const server = require('gulp-server-livereload');
 const browserify = require('gulp-browserify');
 const runSequence = require('run-sequence');
+const msx = require('gulp-msx');
+const del = require('del');
+
+gulp.task('js', function (){
+  return gulp.src('public/js/**/*.js')
+  .pipe(msx({harmony: true}))
+  .pipe(gulp.dest('public/temp/'));
+});
 
 gulp.task('browserify', function() {
-  return gulp.src('./public/js/welcome.js')
+  return gulp.src('./public/temp/welcome.js')
     .pipe(browserify())
     .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('deleteTempFiles', function () {
+  del(['public/temp/']);
 });
 
 gulp.task('copyMainHtml', function() {
@@ -26,5 +38,5 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('default', function () {
-  runSequence('copyMainHtml', 'browserify', 'webserver');
+  runSequence('copyMainHtml', 'js' , 'browserify', 'deleteTempFiles' , 'webserver');
 });

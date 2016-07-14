@@ -2244,5 +2244,26 @@ m.route(document.getElementById('content'), '/', {
 });
 
 },{"./primeiraTela":3,"mithril":1}],3:[function(require,module,exports){
+var primeiraTela = {};
+
+primeiraTela.view = function () {
+  return {tag: "div", attrs: {}, children: [
+           {tag: "form", attrs: {class:"ui large form"}, children: [
+             {tag: "div", attrs: {class:"field"}, children: [
+               {tag: "input", attrs: {name:"text", type:"text", 
+                      placeholder:"login"}
+                }
+             ]}, 
+             {tag: "div", attrs: {class:"field"}, children: [
+               {tag: "input", attrs: {name:"text", type:"text", 
+                      placeholder:"login"}
+                }
+             ]}
+           ]}
+         ]}
+}
+
+
+module.exports = primeiraTela;
 
 },{}]},{},[2])
