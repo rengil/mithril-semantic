@@ -8,7 +8,7 @@ primeiraTela.state = {
 }
 
 primeiraTela.view = function () {
-  return <div class = 'ui text container no-margin-left  basic segment'>
+  return <div class = 'ui text container no-margin-left  segment'>
            <div class='ui divided items'>
              <div class='item'>
                <div class='content'>
