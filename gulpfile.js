@@ -20,7 +20,7 @@ gulp.task('css', function (){
 });
 
 gulp.task('browserify', function() {
-  return gulp.src('./public/temp/welcome.js')
+  return gulp.src('./public/temp/main.js')
     .pipe(browserify())
     .pipe(gulp.dest('dist/'));
 });
