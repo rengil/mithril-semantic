@@ -5,7 +5,6 @@ var chefia = {};
 chefia.state =  {
   loading: m.prop(true),
   finishLoad: function ()  {
-    $()
     setTimeout(function(){
       m.startComputation();
       chefia.state.loading(false);

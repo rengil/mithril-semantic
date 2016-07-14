@@ -1,7 +1,7 @@
 var segundaTela = {};
 
 segundaTela.view = function () {
-  return <div class='ui text container basic segment':
+  return <div class='ui text container basic segment'>
           <div class='ui cards'>
 
             <div class='ui card'>

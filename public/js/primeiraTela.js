@@ -21,7 +21,7 @@ primeiraTela.view = function () {
                      Falar com autor do pedido
                     </button>
 
-                    <button onclick={primeiraTela.state.visualizarclass}
+                    <button onclick={primeiraTela.state.visualizar}
                             class='ui right floated button big button'>
                             Ver detalhes
                     </button>
