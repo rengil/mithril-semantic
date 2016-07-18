@@ -1,22 +1,41 @@
-var segundaTela = {};
+var m = require('mithril');
 
-segundaTela.view = function () {
+var pointOfInterest = {};
+
+pointOfInterest.state = {
+  init: function () {
+    pointOfInterest.state.address = m.prop('Avenida Luciano Gualberto, 22');
+    pointOfInterest.state.lattng = m.prop('');
+  },
+
+  sendToMap: function () {
+    window.location =
+    'www.google.com.br/maps/dir/' + pointOfInterest.state(latlgn);
+  },
+},
+
+pointOfInterest.controller = function () {
+  pointOfInterest.state.init();
+},
+
+pointOfInterest.view = function () {
   return <div class='ui text container basic segment'>
-          <div class='ui cards'>
-
-            <div class='ui card'>
-              <div class='header'> Rua Maranhão, 725 </div>
-              <div class='content'> Lugar legal manolo </div>
-              <button class='ui blue button'> Já Explorei </button>
+           <div class="ui very relaxed items">
+            <div class="item">
+            <div class="left aligned content">
+              <div class="header">{pointOfInterest.state.address()}</div>
             </div>
-
-            <div class='ui card'>
-              <div class='header'> Rua Do Trigo, 725 </div>
-              <div class='content'> Teste </div>
-              <button class='ui red button'> Voltar para não explorado </button>
+            <div class="middle aligned content">
+              <a  text='ver no mapa'  class='item tootip'>
+               <i
+                 class="material-icons point-interest-icon">room
+               </i>
+              </a>
             </div>
+        </div>
           </div>
-         </div>;
+        </div>;
 
-}
-module.exports = segundaTela;
+};
+
+module.exports = pointOfInterest;

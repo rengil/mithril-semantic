@@ -8,8 +8,8 @@ m.route.mode = 'hash';
 
 m.mount(document.getElementById('sidebar'), app);
 
-m.route(document.getElementById('content'), '/chefia', {
+m.route(document.getElementById('content'), '/segundaTela', {
   '/primeiraTela': primeiraTela,
   '/segundaTela': segundaTela,
-  '/chefia': chefia
+  '/chefia': chefia,
 });

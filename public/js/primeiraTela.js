@@ -5,10 +5,10 @@ primeiraTela.state = {
   visualizar: function () {
     m.route('/segundaTela');
   }
-}
+};
 
 primeiraTela.view = function () {
-  return <div class = 'ui text container no-margin-left  segment'>
+  return <div class = 'ui text container no-margin-left segment'>
            <div class='ui divided items'>
              <div class='item'>
                <div class='content'>
@@ -30,7 +30,6 @@ primeiraTela.view = function () {
            </div>
          </div>
        </div>;
-  }
-
+};
 
 module.exports = primeiraTela;
